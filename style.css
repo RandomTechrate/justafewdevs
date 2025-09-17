@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #3f67b5; /* Roblox Blue */
+    --secondary-color: #444;
+    --background-dark: #2c2f33; /* Dark background */
+    --text-light: #fefefe;
+    --card-bg: #36393f;
+    --border-radius: 8px;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: var(--card-bg);
+    border-bottom: 2px solid var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: #5a82ce;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#games .game-gallery,
+#team .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-card,
+.member-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.game-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.game-btn:hover {
+    background: #5a82ce;
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 24px;
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul li {
+        margin: 10px 10px 0;
+    }
+    .hero h2 {
+        font-size: 36px;
+    }
+    .game-card,
+    .member-card {
+        width: 100%;
+    }
+}
